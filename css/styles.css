@@ -9,6 +9,7 @@
   --dark-theme-color: #2f303a;
   --dark-theme-text-color: #ffffff;
   --btn-accent-color: #188ce8;
+  --primary-icon-fill: #afb1b8;
 }
 
 body {
@@ -84,6 +85,7 @@ img {
 .purchase-button:hover,
 .purchase-button:focus {
   background-color: var(--btn-accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .filter-button {
@@ -104,6 +106,32 @@ img {
 .filter-button:focus {
   background-color: var(--accent-color);
   color: var(--dark-theme-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 32px 0px 32px;
+}
+
+.social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.icon {
+  fill: var(--primary-icon-fill);
+}
+
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+  fill: var(--dark-theme-text-color);
 }
 
 .section-headings {
@@ -112,6 +140,17 @@ img {
   line-height: 1.17;
   text-align: center;
   margin-bottom: 50px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
 
 /* ======END COMPONENTS====== */
@@ -152,9 +191,6 @@ img {
 
 /* NAVIGATION */
 
-.navigation {
-}
-
 .navigation-list {
   display: flex;
   align-items: center;
@@ -187,8 +223,15 @@ img {
 
 /* CONTACTS */
 
-.header .contact-mail,
-.header .contact-number {
+.header-contacts {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header-contacts-link {
+  display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -196,19 +239,23 @@ img {
   color: var(--secondary-text-color);
 }
 
-.header .contact-mail {
+.header-contacts-item:not(:last-child) {
   margin-right: 50px;
-  margin-left: auto;
 }
 
-.header .contact-mail:hover,
-.header .contact-mail:focus {
+.header-contacts-icon {
+  fill: var(--secondary-text-color);
+  margin-right: 10px;
+}
+
+.header-contacts-link:hover,
+.header-contacts-link:focus {
   color: var(--accent-color);
 }
 
-.header .contact-number:hover,
-.header .contact-number:focus {
-  color: var(--accent-color);
+.header-contacts-link:hover .header-contacts-icon,
+.header-contacts-link:focus .header-contacts-icon {
+  fill: var(--accent-color);
 }
 
 /* ======HEADER END====== */
@@ -218,9 +265,18 @@ img {
 /* HERO */
 
 .hero {
-  background-color: var(--dark-theme-color);
   text-align: center;
   padding: 200px 0px;
+  background-color: var(--dark-theme-color);
+}
+
+.hero.overlay {
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/hero-bg.jpg');
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main-title {
@@ -236,9 +292,6 @@ img {
 
 /* OUR FEATURES */
 
-.features {
-}
-
 .features-list {
   display: flex;
   margin-left: -30px;
@@ -247,6 +300,13 @@ img {
 .features-list-item {
   flex-basis: calc((100% - 4 * 30px) / 4);
   margin-left: 30px;
+}
+
+.features-wrapper {
+  padding: 25px 100px;
+  background-color: var(--secondary-background-color);
+  margin-bottom: 30px;
+  border-radius: 4px;
 }
 
 .features-headings {
@@ -275,9 +335,6 @@ img {
   justify-content: space-between;
 }
 
-.skills-list-item {
-}
-
 /* OUR TEAM */
 
 .team {
@@ -292,6 +349,9 @@ img {
 .team-list-item {
   flex-basis: calc((100% - 4 * 30px) / 4);
   margin-left: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-member-name {
@@ -308,12 +368,41 @@ img {
   line-height: 1.19;
   text-align: center;
   color: var(--secondary-text-color);
+  margin-bottom: 16px;
 }
 
 .team-member-wrapper {
   background-color: var(--primary-background-color);
   padding-top: 30px;
   padding-bottom: 30px;
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* REGULAR CLIENTS */
+
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clients-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--primary-icon-fill);
+  border-radius: 4px;
+}
+
+.clients-list-link:hover,
+.clients-list-link:focus {
+  border-color: var(--accent-color);
+}
+
+.clients-list-link:hover .clients-list-icon,
+.clients-list-link:focus .clients-list-icon {
+  fill: var(--accent-color);
 }
 
 /* ======MAIN END====== */
@@ -324,6 +413,15 @@ img {
   background-color: var(--dark-theme-color);
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-info {
+  margin-right: 70px;
 }
 
 .footer-container .logo {
@@ -347,16 +445,54 @@ img {
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
   display: inline-block;
-  /* margin-top: 9px; */
 }
 
-.footer .list {
+.footer-contacts-list {
   margin-top: 9px;
 }
 
 .footer-contacts:hover,
 .footer-contacts:focus {
   color: var(--accent-color);
+}
+
+/* SOCIAL LINKS  */
+
+.social-links-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.footer .social-list {
+  padding: 0;
+}
+
+.footer-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--dark-theme-text-color);
+  margin-bottom: 20px;
+}
+
+.footer .social-list-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer .social-list-icon {
+  fill: var(--dark-theme-text-color);
+}
+
+.footer .social-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: var(--accent-color);
 }
 
 /* ======FOOTER END====== */
@@ -391,6 +527,11 @@ img {
   flex-basis: calc((100% - 3 * 30px) / 3);
   margin-left: 30px;
   margin-top: 30px;
+}
+
+.projects-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .projects-title {

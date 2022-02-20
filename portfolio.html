@@ -43,8 +43,24 @@
             </li>
           </ul>
         </nav>
-        <a class="contact-mail link" href="mailto:info@devstudio.com">info@devstudio.com</a>
-        <a class="contact-number link" href="tel:+380961111111">+38 096 111 11 11</a>
+        <ul class="header-contacts list">
+          <li class="header-contacts-item">
+            <a class="header-contacts-link link" href="mailto:info@devstudio.com">
+              <svg class="header-contacts-icon icon" width="16" height="12">
+                <use href="./images/icons.svg#email"></use>
+              </svg>
+              info@devstudio.com</a
+            >
+          </li>
+          <li class="header-contacts-item">
+            <a class="header-contacts-link link" href="tel:+380961111111">
+              <svg class="header-contacts-icon icon" width="10" height="16">
+                <use href="./images/icons.svg#phone"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
 
@@ -74,17 +90,22 @@
 
           <!-- PROJECTS -->
 
-          <h2 hidden>Наши проекты</h2>
+          <h2 class="visually-hidden">Наши проекты</h2>
           <ul class="projects-list list">
             <li class="projects-item">
-              <img src="./images/project-1.jpg" alt="Пример сайта" width="370px" />
+              <img src="./images/project-1.jpg" alt="Пример сайта" width="370" height="294" />
               <div class="projects-item-wrapper">
                 <h3 class="projects-title">Технокряк</h3>
                 <p class="projects-text">Веб-сайт</p>
               </div>
             </li>
             <li class="projects-item">
-              <img src="./images/project-2.jpg" alt="Баскетбольный постер" width="370px" />
+              <img
+                src="./images/project-2.jpg"
+                alt="Баскетбольный постер"
+                width="370"
+                height="294"
+              />
               <div class="projects-item-wrapper">
                 <h3 class="projects-title">
                   Постер <span lang="en">New Orlean vs Golden Star</span>
@@ -93,49 +114,54 @@
               </div>
             </li>
             <li class="projects-item">
-              <img src="./images/project-3.jpg" alt="Логотип ресторана" width="370px" />
+              <img src="./images/project-3.jpg" alt="Логотип ресторана" width="370" height="294" />
               <div class="projects-item-wrapper">
                 <h3 class="projects-title">Ресторан <span lang="en">Seafood</span></h3>
                 <p class="projects-text">Приложение</p>
               </div>
             </li>
             <li class="projects-item">
-              <img src="./images/project-4.jpg" alt="Беспроводные наушники" width="370px" />
+              <img
+                src="./images/project-4.jpg"
+                alt="Беспроводные наушники"
+                width="370"
+                height="294"
+              />
               <div class="projects-item-wrapper">
                 <h3 class="projects-title">Проект <span lang="en">Prime</span></h3>
                 <p class="projects-text">Маркетинг</p>
               </div>
             </li>
             <li class="projects-item">
-              <img src="./images/project-5.jpg" alt="Коробки с дизайном" width="370px" />
+              <img src="./images/project-5.jpg" alt="Коробки с дизайном" width="370" height="294" />
               <div class="projects-item-wrapper">
                 <h3 class="projects-title">Проект <span lang="en">Boxes</span></h3>
                 <p class="projects-text">Приложение</p>
               </div>
             </li>
             <li class="projects-item">
-              <img src="./images/project-6.jpg" alt="Пример сайта" width="370px" />
+              <img src="./images/project-6.jpg" alt="Пример сайта" width="370" height="294" />
               <div class="projects-item-wrapper">
                 <h3 lang="en" class="projects-title">Inspiration has no Borders</h3>
                 <p class="projects-text">Веб-сайт</p>
               </div>
             </li>
             <li class="projects-item">
-              <img src="./images/project-7.jpg" alt="Буклет с дизайном" width="370px" />
+              <img src="./images/project-7.jpg" alt="Буклет с дизайном" width="370" height="294" />
               <div class="projects-item-wrapper">
                 <h3 class="projects-title">Издание <span lang="en">Limited Edition</span></h3>
                 <p class="projects-text">Дизайн</p>
               </div>
             </li>
             <li class="projects-item">
-              <img src="./images/project-8.jpg" alt="Мокап с логотипом" width="370px" />
+              <img src="./images/project-8.jpg" alt="Мокап с логотипом" width="370" height="294" />
               <div class="projects-item-wrapper">
                 <h3 class="projects-title">Проект <span lang="en">LAB</span></h3>
                 <p class="projects-text">Маркетинг</p>
               </div>
             </li>
             <li class="projects-item">
-              <img src="./images/project-9.jpg" alt="Пример приложения" width="370px" />
+              <img src="./images/project-9.jpg" alt="Пример приложения" width="370" height="294" />
               <div class="projects-item-wrapper">
                 <h3 lang="en" class="projects-title">Growing Business</h3>
                 <p class="projects-text">Приложение</p>
@@ -150,16 +176,52 @@
 
     <footer class="footer">
       <div class="footer-container container">
-        <a class="logo link" href="./index.html">Web<span class="logo-footer">Studio</span></a>
-        <address class="location-text">г. Киев, пр-т Леси Украинки, 26</address>
-        <ul>
-          <li class="list">
-            <a class="footer-contacts link" href="mailto:info@example.com">info@example.com</a>
-          </li>
-          <li class="list">
-            <a class="footer-contacts link" href="tel:+380991111111">+38 099 111 11 11</a>
-          </li>
-        </ul>
+        <div class="footer-info">
+          <a class="logo link" href="./index.html">Web<span class="logo-footer">Studio</span></a>
+          <address class="location-text">г. Киев, пр-т Леси Украинки, 26</address>
+          <ul>
+            <li class="footer-contacts-list list">
+              <a class="footer-contacts link" href="mailto:info@example.com">info@example.com</a>
+            </li>
+            <li class="footer-contacts-list list">
+              <a class="footer-contacts link" href="tel:+380991111111">+38 099 111 11 11</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="social-links-wrapper">
+          <p class="footer-text">присоединяйтесь</p>
+          <ul class="social-list list">
+            <li class="social-list-item">
+              <a class="social-list-link" href="">
+                <svg class="social-list-icon" width="20" height="20">
+                  <use href="./images/icons.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list-item">
+              <a class="social-list-link" href="">
+                <svg class="social-list-icon" width="20" height="20">
+                  <use href="./images/icons.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list-item">
+              <a class="social-list-link" href="">
+                <svg class="social-list-icon" width="20" height="20">
+                  <use href="./images/icons.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list-item">
+              <a class="social-list-link" href="">
+                <svg class="social-list-icon" width="20" height="20">
+                  <use href="./images/icons.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
   </body>
